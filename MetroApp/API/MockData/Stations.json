@@ -1,8 +1,272 @@
-//
-//  Stations.json
-//  MetroApp
-//
-//  Created by Vitalii Navrotskyi on 02.10.2023.
-//
-
-import Foundation
+[
+    {
+        "id": "0lckJYn14qk5jEXIXqjb",
+        "name": "Наукова",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": "CjCDao4U4B9WKMiys2yA",
+        "prevStationId": "SWpHHD5zPDfjBMDxsH47",
+        "transferTo": null
+    },
+    {
+        "id": "5gy7AOdxfjYfkq9hilkT",
+        "name": "Завод імені Малишева",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "cQa07XZScIlLGJ4MeLBC",
+        "prevStationId": "sWGGYCEbHczSG25XbAMr",
+        "transferTo": null
+    },
+    {
+        "id": "6vObSb5DjAsh4T9jpzDu",
+        "name": "Захисників України",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": "skBZEruyQt4rueWgRjQi",
+        "prevStationId": "FPyMfv9m9ocbx7sfuJST",
+        "transferTo": null
+    },
+    {
+        "id": "6vx8LmKJEN5GmGANxYmj",
+        "name": "Імені О. С. Масельского",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "rqJqKNYakhom4eteo37m",
+        "prevStationId": "hjLXg07pCwAquXzsF6vf",
+        "transferTo": null
+    },
+    {
+        "id": "CjCDao4U4B9WKMiys2yA",
+        "name": "Держпром",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": "FPyMfv9m9ocbx7sfuJST",
+        "prevStationId": "0lckJYn14qk5jEXIXqjb",
+        "transferTo": "yuW4VNdoFw4eQy0XQjOe"
+    },
+    {
+        "id": "CuB23KlM9zaoWPXxe5Jw",
+        "name": "Перемога",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": "HCzyKnsf7RvhBRsB64U9",
+        "prevStationId": null,
+        "transferTo": null
+    },
+    {
+        "id": "FPyMfv9m9ocbx7sfuJST",
+        "name": "Архітектора Бекетова",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": "6vObSb5DjAsh4T9jpzDu",
+        "prevStationId": "CjCDao4U4B9WKMiys2yA",
+        "transferTo": null
+    },
+    {
+        "id": "HCzyKnsf7RvhBRsB64U9",
+        "name": "Олексіївська",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": "iEBUWPW0ZRmk59ZVLDo7",
+        "prevStationId": "CuB23KlM9zaoWPXxe5Jw",
+        "transferTo": null
+    },
+    {
+        "id": "LT1hzAVFURb8mCeM42ic",
+        "name": "Індустріальна",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": null,
+        "prevStationId": "rqJqKNYakhom4eteo37m",
+        "transferTo": null
+    },
+    {
+        "id": "MF94AqRt7gpdTJ9Bqnc0",
+        "name": "Проспект Гагаріна",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "sWGGYCEbHczSG25XbAMr",
+        "prevStationId": "O5eoCEXEVRCxpnZtaBdF",
+        "transferTo": null
+    },
+    {
+        "id": "O5eoCEXEVRCxpnZtaBdF",
+        "name": "Майдан конституції",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "MF94AqRt7gpdTJ9Bqnc0",
+        "prevStationId": "TZ0wP3JXwfzKUMI9lknK",
+        "transferTo": "bAr4qmGdEJ2ry0kphvdn"
+    },
+    {
+        "id": "SWpHHD5zPDfjBMDxsH47",
+        "name": "Ботанічний сад",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": "0lckJYn14qk5jEXIXqjb",
+        "prevStationId": "iEBUWPW0ZRmk59ZVLDo7",
+        "transferTo": null
+    },
+    {
+        "id": "TZ0wP3JXwfzKUMI9lknK",
+        "name": "Центральний ринок",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "O5eoCEXEVRCxpnZtaBdF",
+        "prevStationId": "jKo7CWOEg9AnZ80crSbu",
+        "transferTo": null
+    },
+    {
+        "id": "ZtwXKiDQhyV1rWBVtEDy",
+        "name": "Холодна гора",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "jKo7CWOEg9AnZ80crSbu",
+        "prevStationId": null,
+        "transferTo": null
+    },
+    {
+        "id": "bAr4qmGdEJ2ry0kphvdn",
+        "name": "Історичний музей",
+        "line": "Салтівська лінія",
+        "city": "Харків",
+        "nextStationId": "yuW4VNdoFw4eQy0XQjOe",
+        "prevStationId": null,
+        "transferTo": "O5eoCEXEVRCxpnZtaBdF"
+    },
+    {
+        "id": "bCCeC1af7AuB5HSiPcmu",
+        "name": "Академіка Павлова",
+        "line": "Салтівська лінія",
+        "city": "Харків",
+        "nextStationId": "zjzuhkms4J3tWaUnWiIv",
+        "prevStationId": "nWmjBvNKUfAoZ3YW21Fh",
+        "transferTo": null
+    },
+    {
+        "id": "cQa07XZScIlLGJ4MeLBC",
+        "name": "Турбоатом",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "rNAHgDouLZQBlN5HLVex",
+        "prevStationId": "5gy7AOdxfjYfkq9hilkT",
+        "transferTo": null
+    },
+    {
+        "id": "hjLXg07pCwAquXzsF6vf",
+        "name": "Армійська",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "6vx8LmKJEN5GmGANxYmj",
+        "prevStationId": "rNAHgDouLZQBlN5HLVex",
+        "transferTo": null
+    },
+    {
+        "id": "iEBUWPW0ZRmk59ZVLDo7",
+        "name": "23 Серпня",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": "SWpHHD5zPDfjBMDxsH47",
+        "prevStationId": "HCzyKnsf7RvhBRsB64U9",
+        "transferTo": null
+    },
+    {
+        "id": "jKo7CWOEg9AnZ80crSbu",
+        "name": "Південний вокзал",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "TZ0wP3JXwfzKUMI9lknK",
+        "prevStationId": "ZtwXKiDQhyV1rWBVtEDy",
+        "transferTo": null
+    },
+    {
+        "id": "mxRIX2TffQb5KMDK6SIL",
+        "name": "Пушкінська",
+        "line": "Салтівська лінія",
+        "city": "Харків",
+        "nextStationId": "wL0RoPv3SSBj4xEbf8GS",
+        "prevStationId": "yuW4VNdoFw4eQy0XQjOe",
+        "transferTo": null
+    },
+    {
+        "id": "nWmjBvNKUfAoZ3YW21Fh",
+        "name": "Академіка Барабашова",
+        "line": "Салтівська лінія",
+        "city": "Харків",
+        "nextStationId": "bCCeC1af7AuB5HSiPcmu",
+        "prevStationId": "wL0RoPv3SSBj4xEbf8GS",
+        "transferTo": null
+    },
+    {
+        "id": "rNAHgDouLZQBlN5HLVex",
+        "name": "Палац Спорту",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "hjLXg07pCwAquXzsF6vf",
+        "prevStationId": "cQa07XZScIlLGJ4MeLBC",
+        "transferTo": null
+    },
+    {
+        "id": "rqJqKNYakhom4eteo37m",
+        "name": "Тракторний завод",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "LT1hzAVFURb8mCeM42ic",
+        "prevStationId": "6vx8LmKJEN5GmGANxYmj",
+        "transferTo": null
+    },
+    {
+        "id": "sWGGYCEbHczSG25XbAMr",
+        "name": "Спортивна",
+        "line": "Холодногірсько-заводська лінія",
+        "city": "Харків",
+        "nextStationId": "5gy7AOdxfjYfkq9hilkT",
+        "prevStationId": "MF94AqRt7gpdTJ9Bqnc0",
+        "transferTo": "skBZEruyQt4rueWgRjQi"
+    },
+    {
+        "id": "skBZEruyQt4rueWgRjQi",
+        "name": "Метробудівників",
+        "line": "Олексіївська лінія",
+        "city": "Харків",
+        "nextStationId": null,
+        "prevStationId": "6vObSb5DjAsh4T9jpzDu",
+        "transferTo": "sWGGYCEbHczSG25XbAMr"
+    },
+    {
+        "id": "wL0RoPv3SSBj4xEbf8GS",
+        "name": "Київська",
+        "line": "Салтівська лінія",
+        "city": "Харків",
+        "nextStationId": "nWmjBvNKUfAoZ3YW21Fh",
+        "prevStationId": "mxRIX2TffQb5KMDK6SIL",
+        "transferTo": null
+    },
+    {
+        "id": "yuW4VNdoFw4eQy0XQjOe",
+        "name": "Університет",
+        "line": "Салтівська лінія",
+        "city": "Харків",
+        "nextStationId": "mxRIX2TffQb5KMDK6SIL",
+        "prevStationId": "bAr4qmGdEJ2ry0kphvdn",
+        "transferTo": "CjCDao4U4B9WKMiys2yA"
+    },
+    {
+        "id": "zFBP0taf2aHLYFQ34j5x",
+        "name": "Героїв Праці",
+        "line": "Салтівська лінія",
+        "city": "Харків",
+        "nextStationId": null,
+        "prevStationId": "zjzuhkms4J3tWaUnWiIv",
+        "transferTo": null
+    },
+    {
+        "id": "zjzuhkms4J3tWaUnWiIv",
+        "name": "Студентська",
+        "line": "Салтівська лінія",
+        "city": "Харків",
+        "nextStationId": "zFBP0taf2aHLYFQ34j5x",
+        "prevStationId": "bCCeC1af7AuB5HSiPcmu",
+        "transferTo": null
+    }
+]
