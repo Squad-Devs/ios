@@ -30,8 +30,7 @@ struct StationManager {
                 let data = try Data(contentsOf: fileUrl)
                 if let decoderData = try? decoder.decode([OneStation].self, from: data)  {
                     completion?(decoderData)
-                }
-                completion?([]) // Return an empty array if there was an error decoding the JSON data.
+                } 
             }
         } catch {
             print("error: \(error)")
