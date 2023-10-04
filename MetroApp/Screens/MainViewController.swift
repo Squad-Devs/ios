@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
+                print(self.stations[1])
             }
         }
     }
@@ -34,7 +35,6 @@ class MainViewController: UIViewController {
         let stationManager = StationManager()
         stationManager.readLocalJSONFile { [weak self]  result in
             self?.stations = result
-            print(self!.stations)
         }
 
         tableView.registerCell(type: MyTableViewCell.self)

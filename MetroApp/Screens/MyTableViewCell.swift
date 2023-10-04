@@ -36,5 +36,4 @@ class MyTableViewCell: UITableViewCell {
         self.nameOfLine.text = nameOfLine
         self.nameOfNextStation.text = nameOfNextStation
     }
-
 }

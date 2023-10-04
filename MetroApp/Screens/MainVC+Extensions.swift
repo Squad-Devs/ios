@@ -31,10 +31,21 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueCell(withType: MyTableViewCell.self) else { return .init() }
 
-        cell.setContent(station: stations[indexPath.row].name,
-                        nameOfCity: stations[indexPath.row].city,
-                        nameOfLine: stations[indexPath.row].line,
-                        nameOfNextStation: stations[indexPath.row].transferTo ?? "")
+        if let nextStationID = stations[indexPath.row].transferTo {
+
+            let nextStaion = stations.first { $0.id == nextStationID }
+
+            cell.setContent(station: stations[indexPath.row].name,
+                            nameOfCity: stations[indexPath.row].city,
+                            nameOfLine: stations[indexPath.row].line,
+                            nameOfNextStation: nextStaion?.name ?? "Немає пересадки")
+        } else {
+            cell.setContent(station: stations[indexPath.row].name,
+                            nameOfCity: stations[indexPath.row].city,
+                            nameOfLine: stations[indexPath.row].line,
+                            nameOfNextStation: "Немає пересадки")
+        }
+
         return cell
     }
 }
