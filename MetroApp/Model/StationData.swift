@@ -12,24 +12,18 @@ struct Stations: Decodable {
 }
 
 struct OneStation: Codable {
-    let id: String
-    let name: String
-    let line: String
-    let city: String
-    let nextStationID: String?
-    let prevStationID: String?
-    let transferTo: String?
-
-    enum CodingKeys: String, CodingKey {
-            case id, name, line, city
-            case nextStationID = "nextStationId"
-            case prevStationID = "prevStationId"
-            case transferTo
-        }
+    let id, name: String
+    let line: Line
+    let city: City
+    let nextStation, prevStation, transferTo: NextStation?
 }
 
 struct DetailStation: Codable {
     let station: OneStation
+}
+
+struct NextStation: Codable {
+    let id, name: String
 }
 
 enum City: String, Codable {
@@ -37,7 +31,8 @@ enum City: String, Codable {
 }
 
 enum Line: String, Codable {
-    case alexLine = "Олексіївська лінія"
-    case salticLine = "Салтівська лінія"
-    case coldRockManufactureLine = "Холодногірсько-заводська лінія"
+    case олексіївськаЛінія = "Олексіївська лінія"
+    case салтівськаЛінія = "Салтівська лінія"
+    case холодногірськоЗаводськаЛінія = "Холодногірсько-заводська лінія"
 }
+

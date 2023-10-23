@@ -33,7 +33,10 @@ class MainViewController: UIViewController {
         tableView.delegate = self
 
         let stationManager = StationManager()
-        stationManager.readLocalJSONFile { [weak self]  result in
+//        stationManager.readLocalJSONFile { [weak self]  result in
+//            self?.stations = result
+//        }
+        stationManager.performRequest { [weak self]  result in
             self?.stations = result
         }
 
