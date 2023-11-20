@@ -38,6 +38,7 @@ class MainViewController: UIViewController {
 //        }
         stationManager.performRequest { [weak self]  result in
             self?.stations = result
+            print("Hello")
         }
 
         tableView.registerCell(type: MyTableViewCell.self)
