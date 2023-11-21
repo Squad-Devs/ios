@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7FDD5B2B0CC0A400D74F0C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA7FDD5A2B0CC0A400D74F0C /* SnapKit */; };
+		FA7FDD5D2B0CC0A400D74F0C /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FA7FDD5C2B0CC0A400D74F0C /* SnapKit-Dynamic */; };
+		FA7FDD602B0CC0B100D74F0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FA7FDD5F2B0CC0B100D74F0C /* Alamofire */; };
 		FAB694D52AC1E0ED00F1660B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB694D42AC1E0ED00F1660B /* AppDelegate.swift */; };
 		FAB694D72AC1E0ED00F1660B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB694D62AC1E0ED00F1660B /* SceneDelegate.swift */; };
 		FAB694D92AC1E0ED00F1660B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB694D82AC1E0ED00F1660B /* MainViewController.swift */; };
@@ -37,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7FDD602B0CC0B100D74F0C /* Alamofire in Frameworks */,
+				FA7FDD5B2B0CC0A400D74F0C /* SnapKit in Frameworks */,
+				FA7FDD5D2B0CC0A400D74F0C /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +145,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAB694E52AC1E0EF00F1660B /* Build configuration list for PBXNativeTarget "MetroApp" */;
 			buildPhases = (
+				FA7FDD612B0CC14A00D74F0C /* Swift Lint */,
 				FAB694CD2AC1E0ED00F1660B /* Sources */,
 				FAB694CE2AC1E0ED00F1660B /* Frameworks */,
 				FAB694CF2AC1E0ED00F1660B /* Resources */,
@@ -148,6 +155,11 @@
 			dependencies = (
 			);
 			name = MetroApp;
+			packageProductDependencies = (
+				FA7FDD5A2B0CC0A400D74F0C /* SnapKit */,
+				FA7FDD5C2B0CC0A400D74F0C /* SnapKit-Dynamic */,
+				FA7FDD5F2B0CC0B100D74F0C /* Alamofire */,
+			);
 			productName = MetroApp;
 			productReference = FAB694D12AC1E0ED00F1660B /* MetroApp.app */;
 			productType = "com.apple.product-type.application";
@@ -176,6 +188,10 @@
 				Base,
 			);
 			mainGroup = FAB694C82AC1E0ED00F1660B;
+			packageReferences = (
+				FA7FDD592B0CC0A400D74F0C /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FA7FDD5E2B0CC0B100D74F0C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FAB694D22AC1E0ED00F1660B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,6 +213,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA7FDD612B0CC14A00D74F0C /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Adds support for Apple Silicon brew directory\n# export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif [ -z \"$CI\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint lint --quiet\n    else\n        echo \"error: 😢 SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAB694CD2AC1E0ED00F1660B /* Sources */ = {
@@ -350,6 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 763C3KNABL;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MetroApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -377,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 763C3KNABL;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MetroApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -418,6 +458,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA7FDD592B0CC0A400D74F0C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		FA7FDD5E2B0CC0B100D74F0C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA7FDD5A2B0CC0A400D74F0C /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA7FDD592B0CC0A400D74F0C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FA7FDD5C2B0CC0A400D74F0C /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA7FDD592B0CC0A400D74F0C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		FA7FDD5F2B0CC0B100D74F0C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA7FDD5E2B0CC0B100D74F0C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAB694C92AC1E0ED00F1660B /* Project object */;
 }
