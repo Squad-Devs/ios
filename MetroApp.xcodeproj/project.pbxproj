@@ -19,6 +19,8 @@
 		FAE1BE1F2ACACC3400140BB0 /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1BE1E2ACACC3400140BB0 /* StationData.swift */; };
 		FAE1BE212ACACD8A00140BB0 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1BE202ACACD8A00140BB0 /* StationManager.swift */; };
 		FAE1BE252ACAD31100140BB0 /* Stations.json in Resources */ = {isa = PBXBuildFile; fileRef = FAE1BE242ACAD31100140BB0 /* Stations.json */; };
+		FAF54DC82B15118400C77445 /* YourCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF54DC72B15118400C77445 /* YourCityView.swift */; };
+		FAF54DCA2B15251D00C77445 /* YourCityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF54DC92B15251D00C77445 /* YourCityInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		FAE1BE1E2ACACC3400140BB0 /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
 		FAE1BE202ACACD8A00140BB0 /* StationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		FAE1BE242ACAD31100140BB0 /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
+		FAF54DC72B15118400C77445 /* YourCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCityView.swift; sourceTree = "<group>"; };
+		FAF54DC92B15251D00C77445 /* YourCityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCityInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		FAE1BE172ACACB1200140BB0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FAF54DC62B15114200C77445 /* YourCityView */,
 				FAE1BE182ACACB2300140BB0 /* MainModule */,
 			);
 			path = Screens;
@@ -136,6 +141,15 @@
 				FAE1BE242ACAD31100140BB0 /* Stations.json */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		FAF54DC62B15114200C77445 /* YourCityView */ = {
+			isa = PBXGroup;
+			children = (
+				FAF54DC72B15118400C77445 /* YourCityView.swift */,
+				FAF54DC92B15251D00C77445 /* YourCityInfo.swift */,
+			);
+			name = YourCityView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB694D92AC1E0ED00F1660B /* MainViewController.swift in Sources */,
+				FAF54DCA2B15251D00C77445 /* YourCityInfo.swift in Sources */,
 				FAB694D52AC1E0ED00F1660B /* AppDelegate.swift in Sources */,
 				FAE1BE212ACACD8A00140BB0 /* StationManager.swift in Sources */,
+				FAF54DC82B15118400C77445 /* YourCityView.swift in Sources */,
 				FAB694D72AC1E0ED00F1660B /* SceneDelegate.swift in Sources */,
 				FAE1BE1D2ACACBF100140BB0 /* Constants.swift in Sources */,
 				FAE1BE1F2ACACC3400140BB0 /* StationData.swift in Sources */,
