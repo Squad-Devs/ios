@@ -16,21 +16,57 @@ struct ConstantsColor {
 class MainViewController: UIViewController {
 //    lazy var yourCityView = YourCityView()
 
-    lazy var box = UIView()
+    private lazy var questionLabel: UILabel = {
+        let labelFrame = CGRect(x: 0, y: 0, width: 200, height: 20)
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.frame = labelFrame
+        label.textColor = .black
+        label.text = "З якого ви міста?"
+        label.font = UIFont(name: "Roboto-Bold", size: 24)
+        return label
+    }()
+
+    private lazy var continueButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = UIColor(named: ConstantsColor.inactiveButtonColor)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Roboto-Medium", size: 16)
+        button.layer.cornerRadius = 16
+        button.setTitle("Продовжити", for: .normal)
+
+        button.widthAnchor.constraint(equalToConstant: 161).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(named: ConstantsColor.inactiveButtonColor)
+        self.view.backgroundColor = .white
 
         setCircles()
 
-//        view.addSubview(box)
-//        box.backgroundColor = .black
-//        box.snp.makeConstraints { make in
-//            make.width.height.equalTo(100)
-//            make.center.equalToSuperview()
-//        }
+        //        view.addSubview(questionLabel)
+
+        let label2 = UILabel()
+        label2.text = "Элемент 2"
+
+        let stackView = UIStackView(arrangedSubviews: [questionLabel, label2, continueButton])
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 20
+
+        view.addSubview(stackView)
+
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+
     }
 
     private func setCircles() {
