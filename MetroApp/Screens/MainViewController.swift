@@ -14,8 +14,6 @@ struct ConstantsColor {
 }
 
 class MainViewController: UIViewController {
-//    lazy var yourCityView = YourCityView()
-
     private lazy var questionLabel: UILabel = {
         let labelFrame = CGRect(x: 0, y: 0, width: 200, height: 20)
         let label = UILabel()
@@ -41,6 +39,88 @@ class MainViewController: UIViewController {
         return button
     }()
 
+    private lazy var kyivButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 16
+
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.spacing = 8
+
+        let imageView = UIImageView(image: UIImage(named: "KyivImg"))
+        imageView.contentMode = .scaleToFill
+        imageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
+
+        let label = UILabel()
+        label.text = "Київ"
+        label.textColor = .black
+
+        stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(label)
+
+        button.addSubview(stackView)
+
+        button.backgroundColor = UIColor.white
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        button.layer.shadowOpacity = 0.2
+        button.layer.shadowRadius = 2
+
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
+
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.widthAnchor.constraint(equalToConstant: 115).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 115).isActive = true
+        return button
+    }()
+
+    private lazy var kharkivButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 16
+
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.spacing = 8
+
+        let imageView = UIImageView(image: UIImage(named: "KharkivImg"))
+        imageView.contentMode = .scaleToFill
+        imageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
+
+        let label = UILabel()
+        label.text = "Харків"
+        label.textColor = .black
+
+        stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(label)
+
+        button.addSubview(stackView)
+
+        button.backgroundColor = UIColor.white
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        button.layer.shadowOpacity = 0.2
+        button.layer.shadowRadius = 2
+
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
+
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.widthAnchor.constraint(equalToConstant: 115).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 115).isActive = true
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,16 +128,17 @@ class MainViewController: UIViewController {
 
         setCircles()
 
-        //        view.addSubview(questionLabel)
+        let stackViewForButtons = UIStackView(arrangedSubviews: [kyivButton, kharkivButton])
+        stackViewForButtons.axis = .horizontal
+        stackViewForButtons.alignment = .center
+        stackViewForButtons.distribution = .equalSpacing
+        stackViewForButtons.spacing = 16
 
-        let label2 = UILabel()
-        label2.text = "Элемент 2"
-
-        let stackView = UIStackView(arrangedSubviews: [questionLabel, label2, continueButton])
+        let stackView = UIStackView(arrangedSubviews: [questionLabel, stackViewForButtons, continueButton])
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .equalSpacing
-        stackView.spacing = 20
+        stackView.spacing = 24
 
         view.addSubview(stackView)
 
