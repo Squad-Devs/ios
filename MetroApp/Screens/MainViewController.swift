@@ -9,14 +9,20 @@ import SnapKit
 import UIKit
 
 class MainViewController: UIViewController {
-    lazy var yourCityView = YourCityView()
+//    lazy var yourCityView = YourCityView()
+
+    lazy var box = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addSubview(yourCityView)
-        yourCityView.snp.makeConstraints{ make in
-            make.edges.equalToSuperview()
+        self.view.backgroundColor = .green
+
+        view.addSubview(box)
+        box.backgroundColor = .black
+        box.snp.makeConstraints{ make in
+            make.width.height.equalTo(100)
+            make.center.equalToSuperview()
         }
 //        self.view.addSubview(box)
 //        box.backgroundColor = .green

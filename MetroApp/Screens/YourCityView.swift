@@ -11,7 +11,7 @@ import UIKit
 class YourCityView: UIView {
     // MARK: - Public
     func configure(with info: YourCityInfo) {
-
+        //
     }
 
     // MARK: - init
