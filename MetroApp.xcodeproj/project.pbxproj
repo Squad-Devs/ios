@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2298052B56F87600991D16 /* CityViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2298042B56F87600991D16 /* CityViewBuilder.swift */; };
 		FA7FDD5B2B0CC0A400D74F0C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA7FDD5A2B0CC0A400D74F0C /* SnapKit */; };
 		FA7FDD5D2B0CC0A400D74F0C /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FA7FDD5C2B0CC0A400D74F0C /* SnapKit-Dynamic */; };
 		FA7FDD602B0CC0B100D74F0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FA7FDD5F2B0CC0B100D74F0C /* Alamofire */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2298042B56F87600991D16 /* CityViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewBuilder.swift; sourceTree = "<group>"; };
 		FAB694D12AC1E0ED00F1660B /* MetroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB694D42AC1E0ED00F1660B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB694D62AC1E0ED00F1660B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1A70E12B544579001F42F8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FA1A70E22B544598001F42F8 /* UI+Extentions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FA1A70E22B544598001F42F8 /* UI+Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI+Extentions";
+			sourceTree = "<group>";
+		};
+		FA2298012B56F61900991D16 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				FA2298042B56F87600991D16 /* CityViewBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
 		FAB694C82AC1E0ED00F1660B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +126,7 @@
 				FAE1BE192ACACB6600140BB0 /* Application */,
 				FAE1BE222ACAD2E100140BB0 /* API */,
 				FAE1BE1A2ACACB7A00140BB0 /* Resources */,
+				FA1A70E12B544579001F42F8 /* Utilities */,
 			);
 			path = MetroApp;
 			sourceTree = "<group>";
@@ -145,6 +171,7 @@
 		FAE1BE1B2ACACBDD00140BB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA2298012B56F61900991D16 /* Builders */,
 				FAE1BE1C2ACACBF100140BB0 /* Constants.swift */,
 				FAE1BE1E2ACACC3400140BB0 /* StationData.swift */,
 				FAE1BE202ACACD8A00140BB0 /* StationManager.swift */,
@@ -313,6 +340,7 @@
 			files = (
 				FAB694D92AC1E0ED00F1660B /* MainViewController.swift in Sources */,
 				FAF54DCA2B15251D00C77445 /* YourCityInfo.swift in Sources */,
+				FA2298052B56F87600991D16 /* CityViewBuilder.swift in Sources */,
 				FAB694D52AC1E0ED00F1660B /* AppDelegate.swift in Sources */,
 				FAE1BE212ACACD8A00140BB0 /* StationManager.swift in Sources */,
 				FAF54DC82B15118400C77445 /* YourCityView.swift in Sources */,
