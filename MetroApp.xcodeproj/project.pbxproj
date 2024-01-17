@@ -32,7 +32,6 @@
 		FAF1D4AB2B504E16009DA6C7 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF1D49F2B504E16009DA6C7 /* Roboto-Bold.ttf */; };
 		FAF1D4AC2B504E16009DA6C7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF1D4A02B504E16009DA6C7 /* Roboto-Regular.ttf */; };
 		FAF1D4AD2B504E16009DA6C7 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF1D4A12B504E16009DA6C7 /* Roboto-ThinItalic.ttf */; };
-		FAF54DC82B15118400C77445 /* YourCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF54DC72B15118400C77445 /* YourCityView.swift */; };
 		FAF54DCA2B15251D00C77445 /* YourCityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF54DC92B15251D00C77445 /* YourCityInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		FAF1D49F2B504E16009DA6C7 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		FAF1D4A02B504E16009DA6C7 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		FAF1D4A12B504E16009DA6C7 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		FAF54DC72B15118400C77445 /* YourCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCityView.swift; sourceTree = "<group>"; };
 		FAF54DC92B15251D00C77445 /* YourCityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCityInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB694D82AC1E0ED00F1660B /* MainViewController.swift */,
+				FA2298012B56F61900991D16 /* Builders */,
 			);
 			name = MainModule;
 			sourceTree = "<group>";
@@ -171,7 +170,6 @@
 		FAE1BE1B2ACACBDD00140BB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA2298012B56F61900991D16 /* Builders */,
 				FAE1BE1C2ACACBF100140BB0 /* Constants.swift */,
 				FAE1BE1E2ACACC3400140BB0 /* StationData.swift */,
 				FAE1BE202ACACD8A00140BB0 /* StationManager.swift */,
@@ -217,7 +215,6 @@
 		FAF54DC62B15114200C77445 /* YourCityView */ = {
 			isa = PBXGroup;
 			children = (
-				FAF54DC72B15118400C77445 /* YourCityView.swift */,
 				FAF54DC92B15251D00C77445 /* YourCityInfo.swift */,
 			);
 			name = YourCityView;
@@ -343,7 +340,6 @@
 				FA2298052B56F87600991D16 /* CityViewBuilder.swift in Sources */,
 				FAB694D52AC1E0ED00F1660B /* AppDelegate.swift in Sources */,
 				FAE1BE212ACACD8A00140BB0 /* StationManager.swift in Sources */,
-				FAF54DC82B15118400C77445 /* YourCityView.swift in Sources */,
 				FAB694D72AC1E0ED00F1660B /* SceneDelegate.swift in Sources */,
 				FAE1BE1D2ACACBF100140BB0 /* Constants.swift in Sources */,
 				FAE1BE1F2ACACC3400140BB0 /* StationData.swift in Sources */,

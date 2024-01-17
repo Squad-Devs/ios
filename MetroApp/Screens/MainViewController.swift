@@ -46,16 +46,19 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setView()
+
         setCircles()
+        setView()
     }
 
     private func setView() {
         self.view.backgroundColor = .white
 
-        let kyivBtn = CityViewBuilder().setTitle("Київ").setImage("KyivImg").build()
-        let kharkivBtn = CityViewBuilder().setTitle("Харків").setImage("KharkivImg").build()
+//        let kyivBtn = CityViewBuilder().setTitle("Київ").setImage("KyivImg").build()
+//        let kharkivBtn = CityViewBuilder().setTitle("Харків").setImage("KharkivImg").build()
+
+        let kyivBtn = CityViewBuilder().build(style: CityViewModel.kyiv)
+        let kharkivBtn = CityViewBuilder().build(style: CityViewModel.kharkiv)
 
         let stackViewForButtons = UIStackView(arrangedSubviews: [kyivBtn, kharkivBtn])
         stackViewForButtons.axis = .horizontal
