@@ -22,6 +22,10 @@ protocol CityViewStyle {
     var backgroundColor: UIColor { get }
 }
 
+// TODO: - struct for default style
+
+
+
 struct CityViewModel: CityViewStyle {
     let title: String
     let imageCity: UIImage

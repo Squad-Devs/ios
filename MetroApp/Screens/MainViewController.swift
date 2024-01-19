@@ -7,6 +7,7 @@
 
 import SnapKit
 import UIKit
+//import Combine
 
 struct ConstantsColor {
     static let inactiveButtonColor = "InactiveButtonColor"
@@ -19,6 +20,9 @@ enum CityVariant: String, CaseIterable {
 }
 
 class MainViewController: UIViewController {
+    private var kyivBtn: UIView = UIView()
+    private var kharkivBtn: UIView = UIView()
+
     private lazy var questionLabel: UILabel = {
         let labelFrame = CGRect(x: 0, y: 0, width: 200, height: 20)
         let label = UILabel()
@@ -31,7 +35,7 @@ class MainViewController: UIViewController {
     }()
 
     private lazy var continueButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(primaryAction: continueBtnAcrion)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(named: ConstantsColor.inactiveButtonColor)
         button.setTitleColor(.black, for: .normal)
@@ -44,12 +48,62 @@ class MainViewController: UIViewController {
         return button
     }()
 
+    private lazy var continueBtnAcrion = UIAction { _ in
+        print(1)
+    }
+
+//    private var cancellables: Set<AnyCancellable> = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setCircles()
         setView()
+
+        setupCombine()
     }
+
+    private func setupCombine() {
+            // Create publishers for kyivBtn and kharkivBtn taps
+        // Create publishers for kyivBtn and kharkivBtn taps
+        
+                let kyivTapGesture = UITapGestureRecognizer(target: self, action: #selector(kyivButtonTapped))
+                kyivBtn.addGestureRecognizer(kyivTapGesture)
+
+                let kharkivTapGesture = UITapGestureRecognizer(target: self, action: #selector(kharkivButtonTapped))
+                kharkivBtn.addGestureRecognizer(kharkivTapGesture)
+
+        }
+    @objc private func kyivButtonTapped() {
+            handleCityButtonTap(.kyiv)
+        }
+
+        @objc private func kharkivButtonTapped() {
+            handleCityButtonTap(.kharkiv)
+        }
+
+    private func handleCityButtonTap(_ city: CityVariant) {
+            updateUI(for: city)
+        }
+
+    private func updateUI(for selectedCity: CityVariant) {
+        // Update UI based on the selected city
+        switch selectedCity {
+        case .kyiv:
+            kyivBtn.layer.borderWidth = 1.0
+            kharkivBtn.layer.borderWidth = 0.0
+        case .kharkiv:
+            kharkivBtn.layer.borderWidth = 1.0
+            kyivBtn.layer.borderWidth = 0.0
+        }
+
+        // Enable continueButton
+        continueButton.isEnabled = true
+        continueButton.backgroundColor = UIColor(named: ConstantsColor.activeButtonColor)
+        continueButton.setTitleColor(.white, for: .normal)
+    }
+
+
 
     private func setView() {
         self.view.backgroundColor = .white
@@ -57,8 +111,8 @@ class MainViewController: UIViewController {
 //        let kyivBtn = CityViewBuilder().setTitle("Київ").setImage("KyivImg").build()
 //        let kharkivBtn = CityViewBuilder().setTitle("Харків").setImage("KharkivImg").build()
 
-        let kyivBtn = CityViewBuilder().build(style: CityViewModel.kyiv)
-        let kharkivBtn = CityViewBuilder().build(style: CityViewModel.kharkiv)
+        kyivBtn = CityViewBuilder().build(style: CityViewModel.kyiv)
+        kharkivBtn = CityViewBuilder().build(style: CityViewModel.kharkiv)
 
         let stackViewForButtons = UIStackView(arrangedSubviews: [kyivBtn, kharkivBtn])
         stackViewForButtons.axis = .horizontal
